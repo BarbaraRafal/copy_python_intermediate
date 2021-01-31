@@ -82,20 +82,12 @@ class Dog:
 
     def make_sound(self):
         for dogs in self.dog_list:
-            print(f"Dog named {dogs['dog_name']} says {dogs['dogs_sound']}")
+            print(f"Dog named {dogs['dog_name']} says {dogs['dog_sound']}")
 
     def get_dog_list(self) -> List[str]:
         return self.dog_list
 
 
-kitty = Cat()
-kitty.add_cat("Grisza", "Miauuu", 5)
-kitty.add_cat("Indira", "Mrrrrr", 6)
-print(kitty.make_sound())
-print(kitty.eat_mouse())
-print(kitty.get_cat_list())
 
-puppy= Dog()
-puppy.add_dog("Czarny Latek", "hau hau")
-puppy.add_dog("Tesla", "auuuuuu")
-print(puppy.make_sound())
+
+
