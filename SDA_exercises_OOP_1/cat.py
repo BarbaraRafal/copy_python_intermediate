@@ -9,4 +9,5 @@ class Cat:
 
     def eat_mouse(self) -> int:
         self.eaten_mouse += 1
+        print(f'Cat {self.cat_name} ate {self.eaten_mouse}. I was very hungry:)')
         return self.eaten_mouse
