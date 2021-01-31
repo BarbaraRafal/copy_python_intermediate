@@ -1,6 +1,8 @@
 import typing
 from typing import List
 
+from SDA_exercises_OOP_1.cat import Cat
+
 """ #1 it works """
 # class Cat:
 #     def __init__(self, cat_name: str):
@@ -50,24 +52,25 @@ it works!!!, I wanted to assign different sound to different cats and also diffe
 """
 
 
-class Cat:
+class CatContainer:
 
     def __init__(self):
         self.cat_list = []
 
-    def add_cat(self, cat_name: str, cat_sound: str, eaten_mouse: int) -> List[str]:
-        self.cat_list.append({"cat_name": cat_name, "cat_sound": cat_sound, 'eaten_mouse': eaten_mouse})
+    def add_cat(self, cat_name: str, cat_sound: str, eaten_mouse: int) -> list:
+        cat1 = Cat(cat_name, cat_sound, eaten_mouse)
+        self.cat_list.append(cat1)
         return self.cat_list
 
     def make_sound(self):
-        for cats in self.cat_list:
-            print(f"Cat named {cats['cat_name']} says {cats['cat_sound']}")
+        for cat in self.cat_list:
+            print(cat.make_sound())
 
     def eat_mouse(self):
-        for cats in self.cat_list:
-            print(f"{cats['cat_name']} ate {cats['eaten_mouse']} mouse/mouses.")
+        for cat in self.cat_list:
+            print(cat.eat_mouse())
 
-    def get_cat_list(self) -> List[str]:
+    def get_cat_list(self) -> list:
         return self.cat_list
 
 
@@ -86,19 +89,3 @@ class Dog:
 
     def get_dog_list(self) -> List[str]:
         return self.dog_list
-
-
-
-  kitty = Cat()
-    kitty.add_cat("Grisza", "Miauuu", 5)
-    kitty.add_cat("Indira", "Mrrrrr", 6)
-    print(kitty.make_sound())
-    print(kitty.eat_mouse())
-    print(kitty.get_cat_list())
-
-    puppy = Dog()
-    puppy.add_dog("Czarny Latek", "hau hau")
-    puppy.add_dog("Tesla", "auuuuuu")
-    print(puppy.make_sound())
-
-
