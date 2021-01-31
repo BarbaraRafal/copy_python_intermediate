@@ -65,7 +65,7 @@ class Cat:
 
     def eat_mouse(self):
         for cats in self.cat_list:
-            print(f"{cats['cat_name']} ate {cats['eaten_mouse']} mousse/mousses.")
+            print(f"{cats['cat_name']} ate {cats['eaten_mouse']} mouse/mouses.")
 
     def get_cat_list(self) -> List[str]:
         return self.cat_list
