@@ -1,5 +1,7 @@
-from SDA_exercises_OOP_1.cat import Cat
-from SDA_exercises_OOP_1.dog import Dog
+from python_intermediate_training.SDA_exercises_OOP_1.cat import Cat
+from python_intermediate_training.SDA_exercises_OOP_1.dog import Dog
+from python_intermediate_training.SDA_exercises_OOP_1.car import Car
+from python_intermediate_training.SDA_exercises_OOP_1.vet import Vet
 
 
 def main():
@@ -22,7 +24,6 @@ def main():
     for animal in animal_list:
         print(animal.make_sound())
 
-
     print(f"Now {cat1.cat_name} is eating")
     cat1.eat_mouse()
     cat1.eat_mouse()
@@ -31,6 +32,18 @@ def main():
     cat1.eat_mouse()
     print(f"Now {cat2.cat_name} is eating")
     cat2.eat_mouse()
+    # wywyołanie metody abstrakcyjnej Movable dla kota i samochodu
+    car1 = Car()
+    print(car1.move())
+
+    print(cat1.move())
+    # wywołanie powitania dla kota i psa
+    vet = Vet()
+    print(vet.say_cat_hello(cat1))
+    print(vet.say_dog_hello(dog1))
+
+    # wywołanie powitania dla zwierzaka
+    print(vet.say_animal_hello(cat4))
 
 
 if __name__ == "__main__":
