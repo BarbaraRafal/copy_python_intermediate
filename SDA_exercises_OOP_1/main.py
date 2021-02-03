@@ -24,13 +24,13 @@ def main():
     for animal in animal_list:
         print(animal.make_sound())
 
-    print(f"Now {cat1.cat_name} is eating")
+    print(f"Now {cat1.name} is eating")
     cat1.eat_mouse()
     cat1.eat_mouse()
     cat1.eat_mouse()
     cat1.eat_mouse()
     cat1.eat_mouse()
-    print(f"Now {cat2.cat_name} is eating")
+    print(f"Now {cat2.name} is eating")
     cat2.eat_mouse()
     # wywyołanie metody abstrakcyjnej Movable dla kota i samochodu
     car1 = Car()
@@ -44,6 +44,7 @@ def main():
 
     # wywołanie powitania dla zwierzaka
     print(vet.say_animal_hello(cat4))
+    print(vet.say_animal_hello(cat3))
 
 
 if __name__ == "__main__":

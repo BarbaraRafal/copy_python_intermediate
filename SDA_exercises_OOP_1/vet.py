@@ -7,12 +7,12 @@ class Vet():
 
     @staticmethod
     def say_cat_hello(cat: Cat) -> str:
-        return f'Witaj {cat.cat_name}'
+        return f'Witaj {cat.name}'
 
     @staticmethod
     def say_dog_hello(dog: Dog) -> str:
-        return f'Witaj {dog.dog_name}'
+        return f'Witaj {dog.name}'
 
     @staticmethod
     def say_animal_hello(animal: Animal):
-        return f"Witaj {animal.animal_name}"
+        return f"Witaj {animal.name}"
