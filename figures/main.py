@@ -16,6 +16,10 @@ def main():
     print(triangle2.get_area())
     print(rectangle3.get_area())
 
+    area = Figure.count_area([triangle3, circle3, rectangle2])
+    print(area)
+
+
 
 if __name__ == "__main__":
     main()

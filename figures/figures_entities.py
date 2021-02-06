@@ -7,6 +7,13 @@ class Figure(abc.ABC):
     def get_area(self):
         pass
 
+    @staticmethod
+    def count_area(figures: list) -> float:
+        area = 0.0
+        for figure in figures:
+            area += figure.get_area()
+        return area
+
 
 class Circle(Figure):
 
