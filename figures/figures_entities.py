@@ -14,6 +14,16 @@ class Figure(abc.ABC):
             area += figure.get_area()
         return area
 
+    @staticmethod
+    def comparing_area(area: float, figures: list) -> bool:
+        figure_area = Figure.count_area(figures)
+        return area > figure_area
+        # if area >= figure_area:
+        #     print("It is enough wall paint to cover all this figures")
+        # else:
+        #     print("Sorry, you have to buy more wall paint.")
+
+
 # to jest pozaklasą
 def count_area_func(*args):
     area = 0.0

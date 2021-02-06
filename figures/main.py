@@ -22,7 +22,10 @@ def main():
     area = count_area_func(triangle3, circle3, rectangle2)
     print(area)
 
-
+    print("Ciekawe czy wystraczy farby??")
+    result = Figure.comparing_area(100, [triangle1, rectangle2, circle3])
+    print(result)
+    print(Figure.count_area(triangle1,rectangle2, circle3)
 
 
 if __name__ == "__main__":
