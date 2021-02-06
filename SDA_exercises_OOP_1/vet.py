@@ -3,7 +3,7 @@ from python_intermediate_training.SDA_exercises_OOP_1.dog import Dog
 from python_intermediate_training.SDA_exercises_OOP_1.animal import Animal
 
 
-class Vet():
+class Vet:
 
     @staticmethod
     def say_cat_hello(cat: Cat) -> str:

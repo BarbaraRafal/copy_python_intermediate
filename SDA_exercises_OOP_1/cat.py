@@ -4,7 +4,7 @@ from python_intermediate_training.SDA_exercises_OOP_1.animal import Animal
 
 class Cat(Animal, Movable):
     def __init__(self, name: str, sound='Miauu', eaten_mouse: int = 0):
-        super().__init__(name)
+        Animal.__init__(self, name) # tu musi być self w nawiasie bo odwołujemy sie do konkretnej klasy
         self.name = name
         self.sound = sound
         self.eaten_mouse = eaten_mouse

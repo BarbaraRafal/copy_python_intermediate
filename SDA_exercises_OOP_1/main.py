@@ -38,13 +38,13 @@ def main():
 
     print(cat1.move())
     # wywołanie powitania dla kota i psa
-    vet = Vet()
-    print(vet.say_cat_hello(cat1))
-    print(vet.say_dog_hello(dog1))
+    #vet = Vet() nie musimy tego robic tylko od razu na klaie zawołać a nie na obiekcie
+    print(Vet.say_cat_hello(cat1))
+    print(Vet.say_dog_hello(dog1))
 
     # wywołanie powitania dla zwierzaka
-    print(vet.say_animal_hello(cat4))
-    print(vet.say_animal_hello(cat3))
+    print(Vet.say_animal_hello(cat4))
+    print(Vet.say_animal_hello(cat3))
 
 
 if __name__ == "__main__":

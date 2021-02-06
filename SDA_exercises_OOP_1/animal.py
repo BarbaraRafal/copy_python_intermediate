@@ -9,3 +9,5 @@ class Animal(ABC):
     @property
     def animal_name(self):
         return self.name
+
+
