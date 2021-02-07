@@ -1,4 +1,4 @@
-from python_intermediate_training.exeptions.exercises import case_1, case_2, case_4, case_6, case_7
+from python_intermediate_training.exeptions.exercises import case_7
 
 def main():
     print('Start up')
