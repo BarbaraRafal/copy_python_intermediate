@@ -52,11 +52,13 @@ def case_4_v2(dictionary: dict):
     items: list = dictionary.get(key, [])
     for item in items:
         print(item)
-    if not items  # nie dokonczone
+    if item not in items:
+        print('Key does not exist or list is empty')
 
 
 def case_6():
     raise NotImplementedError("Solved future")
+
 
 def case_7():
     fd = None
@@ -65,17 +67,18 @@ def case_7():
     except IOError as i:
         print(f'Exception caught {i.args}')
         raise NotImplementedError()
-    finally:# wykonuje sie zawsze chyba ze w srodku jest wyjatek w finally
+    finally:  # wykonuje sie zawsze chyba ze w srodku jest wyjatek w finally
         print("finally run")
         if fd:
             print("File descriptor closing")
             fd.close()
 
-            # finally łaczy sie z try zawsze( moze byc tezexcept, nie musi) i wykonuje sie zawsze
+            # finally łaczy sie z try zawsze( moze byc tez except, nie musi) i wykonuje sie zawsze
+
 
 def case_7_v2():
     try:
-        with open('C:\\aaa.txt') as fd: # context_manager
+        with open('C:\\aaa.txt') as fd:  # context_manager
             print("File is open")
     except IOError as i:
         print(f'Exception caught {i.args}')
