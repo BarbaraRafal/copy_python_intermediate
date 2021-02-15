@@ -14,6 +14,23 @@ def test_count_area():
     #  when
     result = Figure.count_area([circle1, triangle1, rectangle1])
     #  then
-    assert result == 8.1416
+    assert result == 8.14
 
-def test_check_area():
+def test_get_area():
+
+    #  given
+    circle1 = Circle(1)
+    triangle1 = Triangle(2, 1)
+    rectangle1 = Rectangle(2, 2)
+
+
+    #  when
+    figure_area_1 = Circle.get_area(circle1)
+    figure_area_2 = Triangle.get_area(triangle1)
+    figure_area_3 = Rectangle.get_area(rectangle1)
+
+    # then
+
+    assert figure_area_1 == 3.14
+    assert figure_area_2 == 1
+    assert figure_area_3 == 4
