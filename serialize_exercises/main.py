@@ -14,13 +14,19 @@ def main():
     # write_json_to_file()
     # print(read_json_from_file())
 
-    h1 = Human(30, "Jan", "Kowalski")
-    h2 = Human(25, "Anna", "Kowalska")
-    h3 = Human(40, "Tomasz", "Nowak")
+    # h1 = Human(30, "Jan", "Kowalski")
+    # h2 = Human(25, "Anna", "Kowalska")
+    # h3 = Human(40, "Tomasz", "Nowak")
+    #
+    # humans = [h1, h2, h3]
+    #
+    # write_json_to_file
 
-    humans = [h1, h2, h3]
+    humans = read_json_from_file()
+    for human in humans:
+        print(human)
 
-    write_json_to_file(humans)
+    # print(json_human_from_file())
 
 
 if __name__ == "__main__":
