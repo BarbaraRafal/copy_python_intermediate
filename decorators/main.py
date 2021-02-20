@@ -22,7 +22,7 @@ def main():
     #     print("Hello world!")
     #     print(f'{a, b}')
     #     return a, b
-
+# exerciese 2 wywołanie
     read_file(file_path='./abc.txt')
 
 
