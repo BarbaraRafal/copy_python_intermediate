@@ -14,3 +14,16 @@ def write_json_to_file():
             # podajemy w ciele dane do zapisu ( lista) i gdzie (fd) indend 2 format do json
     except(IOError, Exception) as e:
         print(f"Problem with writing to file. More info {e.args}")
+
+
+def read_json_from_file():
+    json_list = []
+
+    try:
+        with open("./training.json", "r") as fd:
+            json_list = json.load(fd)
+
+    except (IOError, Exception) as e:
+        print(f'Problem with writing to file, more info: {e.args}')
+
+    return json_list
