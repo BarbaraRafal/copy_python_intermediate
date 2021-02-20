@@ -36,3 +36,4 @@ def write_json_human_to_file(humans: list):
         print(f"Problem with writing to file. More info {e.args}")
 
 def read_json
+    pass
