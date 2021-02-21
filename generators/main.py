@@ -1,4 +1,6 @@
 from python_intermediate_training.generators.exercise3 import Iterable
+from python_intermediate_training.generators.exercise_4 import file_reader
+from python_intermediate_training.generators.exercise_5 import reader_line_by_line
 
 
 def iterator_ex_1():
@@ -42,12 +44,30 @@ def iterator_ex_3(n):
     print(result)
 
 
+
+
+
+
 def main():
-    # iterator_ex_1()
-    print("exercise 2")
-    iterator_ex_2(100000)
-    print('exercise 3')
-    iterator_ex_3(100000)
+    # # iterator_ex_1()
+    # print("exercise 2")
+    # iterator_ex_2(100000)
+    # print('exercise 3')
+    # iterator_ex_3(100000)
+    # print(file_reader())
+
+    # ex 4
+    # print("exercise 4")
+    reader = file_reader()
+    for element in reader:
+        print(element)
+    # print(file_reader())
+
+    #  ex5
+    # print("exercise5")
+    # for elements in reader_line_by_line():
+    #     print(elements)
+
 
 
 if __name__ == "__main__":
