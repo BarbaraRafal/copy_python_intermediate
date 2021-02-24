@@ -86,13 +86,12 @@ def exercise_8():
 
 
 def exercise_9():
-    my_text = """Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z pełną odpowiedzialnością mogę" 
+    my_text = """Drogi Marszał:wq:qku, Wysoka Izbo. PKB rośnie. Z pełną odpowiedzialnością mogę" 
 stwierdzić iż realizacja określonych zadań stanowionych przez organizację. Dalszy
 rozwój jest ważne zadanie w większym stopniu tworzenie odpowiednich warunków
 aktywizacji. Często niezauważanym szczegółem jest to, że zakres i rozwijanie
 struktur pociąga za najważniejszy punkt naszych działań obierzemy praktykę, nie zaś
 teorię, okazuje się jasne."""
-
     splited_text = my_text.split()
 
     # # liczy słowa
