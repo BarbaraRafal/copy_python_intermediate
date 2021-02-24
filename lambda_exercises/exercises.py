@@ -3,8 +3,8 @@ from decimal import Decimal
 
 def exercise_1():
     names = ["Barbara", "Krzysztof", "Kazimierz", "Lilianna", "Grisza", "Indira"]
-    print("case A")
 
+    print("case A")
     result_a = sorted(names, key=lambda name: len(name))
     print(result_a)
 
