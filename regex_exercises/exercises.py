@@ -86,7 +86,6 @@ def exercise_8():
 
 
 def exercise_9():
-    from collections import Counter
     my_text = """Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z pełną odpowiedzialnością mogę" 
 stwierdzić iż realizacja określonych zadań stanowionych przez organizację. Dalszy
 rozwój jest ważne zadanie w większym stopniu tworzenie odpowiednich warunków
@@ -97,15 +96,19 @@ teorię, okazuje się jasne."""
     splited_text = my_text.split()
 
     # # liczy słowa
-    splited_text_list = []
-    for word in splited_text:
-        splited_text_list.append(word)
-        amount_of_words = splited_text_list.count(word
+    amount_of_words = len(splited_text)
     print(f"Liczba słów w tekście to:{amount_of_words}")
+    # # liczy znaki
+    amount_of_characters = len(my_text)
+    print(f"Liczba znaków w tekście to:{amount_of_characters}")
+
+    ## liczy srędnią długość wyrazu
+    average_lenght_of_word = amount_of_characters / amount_of_words
+    print(f"Średnia długość wyrazu to: {round(average_lenght_of_word)}")
 
     ## wyswietla najdłuże i najkrótsze słowo
     longest_word = max(splited_text, key=len)
-    print(f"Najdłuższe słowo to:{longest_word} a jego długość to:{len(longest_word)}")
+    print(f"Najdłuższe słowo to:{longest_word} a jego długość to: {len(longest_word)}")
 
     shortest_word = min(splited_text, key=len)
     print(f"Najkrótsze słowo to:{shortest_word} a jego długość to: {len(shortest_word)}")
