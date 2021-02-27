@@ -87,28 +87,57 @@ def exercise_8():
 
 
 def exercise_9():
-    my_text = """Drogi Marszał:wq:qku, Wysoka Izbo. PKB rośnie. Z pełną odpowiedzialnością mogę" 
+    my_text = """Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z pełną odpowiedzialnością mogę" 
 stwierdzić iż realizacja określonych zadań stanowionych przez organizację. Dalszy
 rozwój jest ważne zadanie w większym stopniu tworzenie odpowiednich warunków
 aktywizacji. Często niezauważanym szczegółem jest to, że zakres i rozwijanie
 struktur pociąga za najważniejszy punkt naszych działań obierzemy praktykę, nie zaś
 teorię, okazuje się jasne."""
-    splited_text = my_text.split()
+    # splited_text = my_text.split()
+    # print(splited_text)
 
-    # # liczy słowa
-    amount_of_words = len(splited_text)
-    print(f"Liczba słów w tekście to:{amount_of_words}")
-    # # liczy znaki
-    amount_of_characters = len(my_text)
-    print(f"Liczba znaków w tekście to:{amount_of_characters}")
+    # # # liczy słowa
+    # amount_of_words = len(splited_text)
+    # print(amount_of_words)
+    # print(f"Liczba słów w tekście to:{amount_of_words}")
+    # # # liczy znaki
+    # amount_of_characters = len(my_text)
+    # print(f"Liczba znaków w tekście to:{amount_of_characters}")
+    #
+    # ## liczy srędnią długość wyrazu
+    # average_lenght_of_word = amount_of_characters / amount_of_words
+    # print(f"Średnia długość wyrazu to: {round(average_lenght_of_word)}")
+    #
+    # ## wyswietla najdłuże i najkrótsze słowo
+    # longest_word = max(splited_text, key=len)
+    # print(f"Najdłuższe słowo to:{longest_word} a jego długość to: {len(longest_word)}")
+    #
+    # shortest_word = min(splited_text, key=len)
+    # print(f"Najkrótsze słowo to:{shortest_word} a jego długość to: {len(shortest_word)}")
 
-    ## liczy srędnią długość wyrazu
-    average_lenght_of_word = amount_of_characters / amount_of_words
-    print(f"Średnia długość wyrazu to: {round(average_lenght_of_word)}")
+    ### rozwiązanie Adama
+    empty_text = ''
 
-    ## wyswietla najdłuże i najkrótsze słowo
-    longest_word = max(splited_text, key=len)
-    print(f"Najdłuższe słowo to:{longest_word} a jego długość to: {len(longest_word)}")
+    words_number = my_text.split()  ## zwraca listę
+    # print(words_number)
+    print(f'Words number: {len(words_number)}')
 
-    shortest_word = min(splited_text, key=len)
-    print(f"Najkrótsze słowo to:{shortest_word} a jego długość to: {len(shortest_word)}")
+    char_number = re.split(empty_text, my_text)
+    # print(char_number)
+    print(f'Characters number: {len(char_number)}')
+
+    average_operation = [len(char_number) for char_number in words_number] # lista zawierajca długość każdego wyrazu
+    print(average_operation)
+    average = sum(average_operation) / len(average_operation)
+    print(f'The average word length is: {average:.2f}')
+   # average_operation = [] # dłuższy zapis
+    # for char_number in words_number:
+    #    average_operation.append(len(char_number))
+    # average = sum(average_operation) / len(average_operation)
+    # print(f'Average : {average}')
+
+    max_word = [len(char_number) for char_number in words_number]
+    print(f'The longest number of characters in a word: {max(max_word)}')
+
+    min_word = [len(char_number) for char_number in words_number]
+    print(f'The shortest number of characters in a word: {min(min_word)}')
