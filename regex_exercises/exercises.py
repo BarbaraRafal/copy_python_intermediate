@@ -18,7 +18,7 @@ def exercise_1():
 def exercise_2():
     print('Write postal code:')
     value = input()
-    expression = '[0-9]{2}-[0-9]{3}'
+    expression = r'[0-9]{2}-[0-9]{3}'
     if re.fullmatch(expression, value):
         print("This postal code is correct")
     else:
@@ -68,7 +68,8 @@ def exercise_6():
 def exercise_7():
     print('Write your serial number: ')
     value = input()
-    expression = '([A-Z0-9!@#\\$%\\^&\\*]{5}\\-){4}[A-Z0-9!@#\\$%\\^&\\*]'  ### to wyrażenie skopiowane z odpowiedzi nie działa
+
+    expression = r'([A-Z0-9!@#\$%\^&\*]{5}-){4}[A-Z0-9!@#\$%\^&\*]{5}'
     if re.fullmatch(expression, value):
         print("Your serial number is correct.")
     else:
