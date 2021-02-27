@@ -10,7 +10,7 @@ from python_intermediate_training.regex_exercises.exercises import exercise_9
 
 
 def main():
-    exercise_7()
+    exercise_9()
 
 
 if __name__ == "__main__":
