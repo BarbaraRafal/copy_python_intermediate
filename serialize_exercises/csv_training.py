@@ -1,5 +1,3 @@
-
-
 import csv
 
 
@@ -28,6 +26,15 @@ def csv_read():
     return users
 
 
+def csv_append(row: Tuple):
+    try:
+        with open("./data.csv", "a") as fd:
+            writer = csv.writer(fd)
+            writer.writerow(row)
+    except(Exception, IOError) as e:
+        print(f"Exception while appending row to csv file{e.args}")
+
+
 def main():
     users = [
         ('John', 'Smith', 765438),
@@ -36,6 +43,8 @@ def main():
     csv_write(users)
     returned_users = csv_read()
     print(returned_users)
+    new_row = ("basia", 35)
+    csv_append(new_row)
 
 
 if __name__ == "__main__":
