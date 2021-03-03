@@ -6,7 +6,7 @@ def open_file(path: str, mode='a'):
     print("opening file in progress...")
     fd = open(path, mode)
     yield fd  # zwracmy to do with
-    f.close()  # tu musimy zawołac to co sie dzieje po wyjsciu  with
+    fd.close()  # tu musimy zawołac to co sie dzieje po wyjsciu  with
     print("file is closing...")
 
 

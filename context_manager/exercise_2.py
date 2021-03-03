@@ -4,14 +4,14 @@ class OpenFileManager:
         self.__mode = mode
         self.__fd = None
 
-    @property
+    @property ## gettery
     def source(self):
         return self.__source
 
     def get_source(self):
         return self.__source
 
-    @source.setter
+    @source.setter ## settery
     def source(self, path: str):
         self.__source = path
 
@@ -31,10 +31,10 @@ class OpenFileManager:
 def exercise_2():
     manager = OpenFileManager()
     manager_source = manager.source  # getter
-    print(manager_source)
-    manager.source = "./test_file.txt"  # setter
-    manager_source = manager.source  # getter
-    print(manager_source)
+    print(manager_source) # drukujemy ale jest pusty
+    manager.source = "./test_file.txt"  # setter ustawiamy sciezke/Ÿród³o
+    manager_source = manager.source  # getter znowu pobieramy sciezke
+    print(manager_source) # i j¹ drukujemy
 
     try:
         with manager as fd:
