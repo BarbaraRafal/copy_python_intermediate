@@ -37,9 +37,9 @@ def iterator_ex_2(n):
 def iterator_ex_3(n):
     print('exercise3')
     import sys
-    iterator = Iterable(n)
-    print(f'Size of iterator in bytes: {sys.getsizeof(iterator)} ')
-    result = sum(iterator)
+    iterator_list = Iterable(n)
+    print(f'Size of iterator in bytes: {sys.getsizeof(iterator_list)} ')
+    result = sum(iterator_list)
     print(f'size of one number in bytes : {sys.getsizeof(result)}')
     print(result)
 
@@ -53,11 +53,12 @@ def main():
     # print(file_reader())
 
     # ex 4
-    print("exercise 4")
-    exercise_4()
+    # print("exercise 4")
+    # exercise_4()
 
     #  ex5
-    # print("exercise5")
+    print("exercise5")
+    reader_line_by_line()
     # for elements in reader_line_by_line():
     #     print(elements)
 
